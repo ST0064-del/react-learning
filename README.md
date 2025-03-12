@@ -6,7 +6,7 @@ Just for learning react and design patterns
 
 Objectif : Développer une application permettant aux utilisateurs de créer, modifier et suivre des tâches avec différentes fonctionnalités avancées.
 
-🔹 ## Fonctionnalités principales :
+## 🔹 Fonctionnalités principales :
 ✅ Ajouter, modifier, supprimer des tâches 📋
 ✅ Catégoriser les tâches (Travail, Perso, Urgent, etc.)
 ✅ Notifications (e-mails, SMS, popup) 🔔
