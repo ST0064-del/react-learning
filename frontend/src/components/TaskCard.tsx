@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button } from "antd";
-import { Task } from "../services/taskServices";
+import { Task } from "../api/taskServices";
 
 interface TaskCardProps {
   task: Task;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from "antd";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
-import { Task, fetchTasks, deleteTask } from "./services/taskServices";
+import { Task, fetchTasks, deleteTask } from "./api/taskServices";
 
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);

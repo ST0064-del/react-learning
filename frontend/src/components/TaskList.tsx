@@ -1,6 +1,6 @@
 import React from "react";
 import TaskCard from "./TaskCard";
-import { Task } from "../services/taskServices";
+import { Task } from "../api/taskServices";
 import { Button } from "antd";
 
 interface TaskListProps {

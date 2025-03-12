@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Form, Input, Select, Button, message } from "antd";
-import { Task, addTasks, updateTasks } from "../services/taskServices";
+import { Task, addTasks, updateTasks } from "../api/taskServices";
 
 const { Option } = Select;
 

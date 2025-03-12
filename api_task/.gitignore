@@ -1,0 +1,16 @@
+# Python-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django-specific files
+*.log
+
+# IDE/editor files
+.vscode/
+
+w_sql/
+w_note/
+docker-compose.yml
+Dockerfile
