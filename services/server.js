@@ -1,26 +1,30 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const sequelize = require("./database/database");
-const seedDatabase = require("./database/seed");
+const {
+  app,
+  express,
+  cors,
+  bodyParser,
+  io,
+  PORT,
+} = require("./config/configServer");
 
-const TaskRoutes = require("./routes/TaskRoutes");
+const NotifRoutes = require("./routes/NotifRoutes");
 
-const app = express();
-const PORT = 5000;
-
-app.use(bodyParser.json());
+//Middlewares
 app.use(cors());
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use("/api", TaskRoutes);
+// Gestion des connexions socket.io
+io.on("connection", (socket) => {
+  console.log("New client connected");
 
-sequelize
-  .sync()
-  .then(() => {
-    console.log("Base de données SQLite synchronisée");
-    // seedDatabase();
-  })
-  .catch((err) => console.error("Erreur de synchronisation", err));
+  socket.on("disconnect", () => {
+    console.log("Client disconnected");
+  });
+});
+
+// route
+app.use("/api/", NotifRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
